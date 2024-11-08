@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #004274;
+    position: relative;
+    height: 70px;
+}
+
+.logo {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon svg {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Button Styling */
+.sign-in-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sign-in-buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    background-color: #0082e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.sign-in-buttons button:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sign-in-buttons button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sign-in-buttons button:first-child {
+    background-color: #0082e6;
+}
+
+.sign-in-buttons button:first-child:hover {
+    background-color: #005bb5;
+}
+
+
+@media (max-width: 600px) {
+    
+    .sign-in-buttons {
+        display: none;
+    }
+
+    
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 20px;
+    }
+
+    
+    .menu-icon {
+        display: block;
+    }
+
+
+    #menuList {
+        max-height: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #004274;
+        width: 300px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #menuList li {
+        padding: 20px;
+    }
+
+    #menuList li a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+a.active, a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
