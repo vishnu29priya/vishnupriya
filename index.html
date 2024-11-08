@@ -3,46 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <h1>kits Sell Dapp</h1>
+    <h1 class="header">TO DO LIST <img class="books" src="images.png" alt="Books"></h1>
+    <div class="container">
+        <div class="first">
+            <input class="todo-input" type="text" placeholder="List your to-dos here" id="input">
+            <button class="button" id="add">+ Add</button>
         </div>
-        <ul id="menuList">
-            <li><a href="#" class="active"></a></li>
-            <li><a href="#">For Reference Only</a></li>
-            <li><a href="#">Main Infos</a></li>
-            <li><a href="#">Main Dapp</a></li>
-            <li><a href="#">Main Mobile</a></li>
-        </ul>
-        <div class="menu-icon">
-            <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><!-- Width and height added -->
-                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
-             </svg>   
-            
-        </div>
-        <div class="sign-in-buttons">
-            <button>Sign up</button>
-            <button>Log in</button>
-        </div>
-        
-    </nav>
-    <script>
-        let menuList = document.getElementById("menuList");
-        menuList.style.maxHeight = "0px"; 
-
-        function toggleMenu() {
-            if (menuList.style.maxHeight == "0px") { 
-                menuList.style.maxHeight = "300px"; 
-            } else {
-                menuList.style.maxHeight = "0px"; 
-            }
-        }
-    </script>
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </div>
+    <div id="todolist"class=list></div>
+    <script src="script.js"></script>
 </body>
 </html>
